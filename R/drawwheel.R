@@ -1,21 +1,9 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   https://r-pkgs.org
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+
 library(tidyverse)
 library(dplyr)
 library(viridis)
 library(geomtextpath)
+
 # import data structure
 wheel_structure <- read.csv("R/wheel_structure.csv")
 
@@ -65,6 +53,9 @@ drawwheel <- function(data) {
   wheel_data$id <- rep( seq(1, nrow(wheel_data)/nLevelType) , each=nLevelType)
 
   # Get the name and the y position of each label
+  # sort wheel_data
+  wheel_data <- arrange(wheel_data, index)
+
   # create data for each sub_slice
   label_data <- wheel_data |> group_by(id, sub_slice) |> summarize(tot=sum(value))
   number_of_bar <- nrow(label_data) # number of sub_slices
@@ -86,6 +77,14 @@ drawwheel <- function(data) {
   grid_data$start <- grid_data$start - 1
   grid_data <- grid_data[-1,]
 
+  # print("base_data:")
+  # print(base_data)
+  print("wheel_data:")
+  print(wheel_data)
+  saveRDS(wheel_data, "wheel_data.rds")
+  print("grid_data:")
+  print(grid_data)
+  saveRDS(grid_data, "grid_data.rds")
   # Make the plot
   # p <- ggplot(wheel_data) +
   #

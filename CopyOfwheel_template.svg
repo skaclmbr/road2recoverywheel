@@ -5,9 +5,32 @@
    viewBox="0 0 120 120"
    version="1.1"
    id="svg1"
+   sodipodi:docname="wheel_template.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.30294792"
+     inkscape:cx="2267.7165"
+     inkscape:cy="2267.7165"
+     inkscape:window-width="2880"
+     inkscape:window-height="1676"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
   <defs
      id="defs1" />
   <g
@@ -563,6 +586,7 @@
   <g
      id="g150"
      style="display:inline"
+     inkscape:label="outer label boxes"
      transform="translate(-66.823754,-38.506241)">
     <path
        d="m 67.171536,96.611224 a 59.787674,59.787674 0 0 0 0.01602,2.040187 l 9.940998,-8e-6 A 49.706608,49.706608 0 0 1 77.117181,98.506196 49.706608,49.706608 0 0 1 101.94409,55.634911 L 96.900469,46.89901 a 59.787674,59.787674 0 0 0 -0.733805,0.400492 59.787674,59.787674 0 0 0 -3.563607,2.330091 59.787674,59.787674 0 0 0 -3.414778,2.556432 59.787674,59.787674 0 0 0 -3.19257,2.811198 59.787674,59.787674 0 0 0 -3.014804,3.014804 59.787674,59.787674 0 0 0 -2.762105,3.239078 59.787674,59.787674 0 0 0 -2.554366,3.412195 59.787674,59.787674 0 0 0 -2.273763,3.600814 59.787674,59.787674 0 0 0 -2.042252,3.739306 59.787674,59.787674 0 0 0 -1.738912,3.889169 59.787674,59.787674 0 0 0 -1.488283,3.989934 59.787674,59.787674 0 0 0 -1.167886,4.098456 59.787674,59.787674 0 0 0 -0.904856,4.159958 59.787674,59.787674 0 0 0 -0.573608,4.225578 59.787674,59.787674 0 0 0 -0.303342,4.244708 z"
@@ -592,7 +616,8 @@
   <g
      id="g253-2"
      style="display:none"
-     transform="rotate(20,202.60174,-110.23504)">
+     transform="rotate(20,202.60174,-110.23504)"
+     inkscape:label="outer label paths">
     <path
        id="path257"
        style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#444444;stroke-width:0.681069;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"

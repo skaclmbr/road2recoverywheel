@@ -8,6 +8,11 @@
 #
 
 library(shiny)
+library(htmltools)
+library(bslib)
+# library(rsvg)
+# library(bscui)
+source("draw_wheel.R")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -18,16 +23,16 @@ ui <- fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+            div("This is a test.")
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("distPlot")
+          card(
+            card_body(
+              imageOutput("wheelDiagram")
+            )
+          )
         )
     )
 )
@@ -35,16 +40,16 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+  # svg interactivity:  https://forum.posit.co/t/use-shiny-setinputvalue-to-register-the-clicking-of-svg/47919
 
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
+    output$wheelDiagram <- renderImage(
+      {
+        list(
+          src = draw_wheel(),
+          height = "400px"
+          )
+      }, deleteFile = FALSE)
+
 }
 
 # Run the application
